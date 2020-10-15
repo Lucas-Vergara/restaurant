@@ -7,25 +7,88 @@ body {
 }
 
 h1 {
-    color: brown;
+    color: white;
     font-size: 300%;
 }
 
 h2 {
-    color: brown
+    color: white
 }
 
+h3 {
+    color: wheat;
+}
 
 
 #container {
     margin-left: 10%;
     text-align: center;
     margin-top: 150px;
-    background-color: rgba(245, 222, 179, 0.842);
+    background-color: #525b75b9;
     width: fit-content;
     padding-top: 20px;
     padding-bottom: 20px;
     border-radius: 10px;
     padding-right: 10px;
     padding-left: 10px;
+}
+
+#navbar *{
+    color: white;
+    border-bottom: 5px solid white;
+    padding-bottom: 10px;
+    margin-left: 10px;
+    font-size: x-large;
+}
+
+#navbar {
+    position: absolute;
+    right: 100px;
+    top: 20px;
+}
+
+#navbar *:hover {
+    color: #525b75b9;
+    border-bottom: 5px solid #525b75b9;
+    cursor: pointer;
+}
+
+#menuContainer {
+    position: absolute;
+    right: 40%;
+    margin-top: 70px;
+    text-align: center;
+    background-color: #525b75b9;
+    padding: 10px 50px;
+    width: max-content;
+    border-radius: 10px;
+}
+
+#facebook {
+    background: url(images/face.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#instagram {
+    background: url(images/insta.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#twitter {
+    background: url(images/twitter.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#contactContainer {
+    position: absolute;
+    right: 40%;
+    margin-top: 70px;
+    text-align: center;
+    background-color: #525b75b9;
+    padding: 10px 50px;
+    width: max-content;
+    border-radius: 10px;
 }

@@ -1,6 +1,6 @@
 import {titles, navbar, clear} from './home'
 import menu from './menu'
-import contact from './contact'
+import {singleContact, append, contacts} from './contact'
 
 
 navbar();
@@ -13,7 +13,7 @@ document.getElementById('nav1').addEventListener('click', clear);
 document.getElementById('nav1').addEventListener('click', titles);
 
 document.getElementById('nav3').addEventListener('click', clear);
-document.getElementById('nav3').addEventListener('click', contact);
+document.getElementById('nav3').addEventListener('click', contacts);
 
 
 

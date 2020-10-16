@@ -1,39 +1,46 @@
 
-const contact = () => {
-    let container = document.createElement('div')
-    container.id = 'contactContainer'
-
-    let facebook = document.createElement('div')
-    let span1 = document.createElement('span')
-    span1.id = 'facebook'
-    let span2 = document.createElement('span')
-    span2.innerHTML = ' Facebook'
-    facebook.appendChild(span1)
-    facebook.appendChild(span2)
-
-    let insta = document.createElement('div')
-    span1 = document.createElement('span')
-    span1.id = 'instagram'
-    span2 = document.createElement('span')
-    span2.innerHTML = ' Instagram'
-    insta.appendChild(span1)
-    insta.appendChild(span2)
-
-    let twitter = document.createElement('div')
-    span1 = document.createElement('span')
-    span1.id = 'twitter'
-    span1.innerHTML = ''
-    span2 = document.createElement('span')
-    span2.innerHTML = ' Twitter'
-    twitter.appendChild(span1)
-    twitter.appendChild(span2)
-    
-    container.appendChild(facebook)
-    container.appendChild(insta)
-    container.appendChild(twitter)
-
-    document.getElementById('content').appendChild(container)
-    
+let append = (...family) => {
+    let parent = family[family.length-1]
+    for(let i=0; i<family.length-1; i++){
+        parent.appendChild(family[i])
+    }
 }
 
-export default contact
+let singleContact = (id, text) => {
+    let contact = document.createElement('div')
+    let a = document.createElement('a')
+    let span1 = document.createElement('span')
+    span1.id = id
+    span1.innerHTML = ''
+    let span2 = document.createElement('span')
+    span2.innerHTML = text
+    span2.classList.add('contact')
+    append(span1,span2,a)
+    append(a,contact)
+    return contact
+}
+
+let contacts = () => {
+    // let image = document.createElement('div')
+    // image.id = 'contactImage'   
+    let facebook = singleContact('facebook', ' Facebook')
+    facebook.firstChild.href = 'www.facebook.com'
+    let twitter = singleContact('twitter', ' Twitter')
+    twitter.firstChild.href = 'www.twitter.com'
+    let instagram = singleContact('instagram', ' Instagram')
+    instagram.firstChild.href = 'www.instagram.com'
+    
+    let column1 = document.createElement('div')
+    append(facebook,instagram,twitter,column1)
+    let column2 = document.createElement('div')
+    column2.id = 'contactImage'
+
+    let container = document.createElement('div')
+    container.id = 'contactContainer'
+    append(column1,column2,container)
+
+    document.getElementById('content').appendChild(container)
+
+}
+
+export {singleContact, append, contacts}

@@ -19,6 +19,8 @@ h3 {
     color: wheat;
 }
 
+a { text-decoration: none; }
+
 
 #container {
     margin-left: 10%;
@@ -68,27 +70,54 @@ h3 {
     background: url(images/face.png);
     background-size: contain;
     background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
 }
 
 #instagram {
     background: url(images/insta.png);
     background-size: contain;
     background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
 }
 
 #twitter {
     background: url(images/twitter.png);
     background-size: contain;
     background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
 }
 
 #contactContainer {
     position: absolute;
-    right: 40%;
-    margin-top: 70px;
-    text-align: center;
+    right: 25%;
+    margin-top: 100px;
     background-color: #525b75b9;
-    padding: 10px 50px;
-    width: max-content;
+    padding: 50px 50px;
+    width: 600px;
     border-radius: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+#contactContainer *{
+    font-size: x-large;
+    color: whitesmoke;
+    align-items: center;
+    
+}
+
+#contactImage {
+    background: url(images/pastel.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.contact {
+    vertical-align: top;
 }

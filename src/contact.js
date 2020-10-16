@@ -24,11 +24,11 @@ let contacts = () => {
     // let image = document.createElement('div')
     // image.id = 'contactImage'   
     let facebook = singleContact('facebook', ' Facebook')
-    facebook.firstChild.href = 'www.facebook.com'
+    facebook.firstChild.href = 'http://www.facebook.com'
     let twitter = singleContact('twitter', ' Twitter')
-    twitter.firstChild.href = 'www.twitter.com'
+    twitter.firstChild.href = 'http://www.twitter.com'
     let instagram = singleContact('instagram', ' Instagram')
-    instagram.firstChild.href = 'www.instagram.com'
+    instagram.firstChild.href = 'http://www.instagram.com'
     
     let column1 = document.createElement('div')
     append(facebook,instagram,twitter,column1)
